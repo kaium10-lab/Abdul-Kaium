@@ -2,59 +2,73 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
-/* FULL SCREEN BACKGROUND */
 body {
-    background: #e8dccf;
+    background: #f6e9de;
 }
 
-/* CENTER CV LIKE IMAGE */
-.screen {
+/* FULL SCREEN HOLDER */
+.viewport {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* CV CARD */
-.cv {
+/* POSTER SIZE (phone perfect) */
+.cv-poster {
     width: 100%;
-    max-width: 420px;   /* phone perfect width */
+    max-width: 430px;
+    aspect-ratio: 3 / 5;
     background: #fdf1e8;
-    border-radius: 20px;
+    display: flex;
+    border-radius: 24px;
     overflow: hidden;
 }
 
 /* LEFT */
 .left {
+    width: 40%;
     background: #9c7354;
-    color: white;
+    color: #fff;
+    padding: 18px;
     text-align: center;
-    padding: 25px;
 }
 
-.left img {
-    width: 130px;
-    height: 130px;
+.photo img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
 .left h1 {
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 2px;
 }
 
-.subtitle {
-    margin: 10px 0 20px;
+.left hr {
+    width: 60%;
+    margin: 12px auto;
+    border: 1px solid #fff;
+}
+
+.title {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.contact h3 {
     font-size: 14px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
 }
 
 .contact p {
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 8px;
 }
 
@@ -65,37 +79,35 @@ body {
 
 /* RIGHT */
 .right {
-    padding: 20px;
+    width: 60%;
+    padding: 18px;
+}
+
+section {
+    margin-bottom: 14px;
 }
 
 .right h2 {
     font-size: 18px;
-    margin: 15px 0 5px;
+    margin-bottom: 6px;
     color: #3a2a1d;
 }
 
 .right p,
 .right li {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .right ul {
-    margin-left: 18px;
+    margin-left: 16px;
 }
 
-/* DESKTOP VIEW */
+/* DESKTOP AUTO SCALE */
 @media (min-width: 768px) {
-    .cv {
+    .cv-poster {
         max-width: 900px;
-        display: flex;
-    }
-
-    .left {
-        width: 35%;
-    }
-
-    .right {
-        width: 65%;
+        aspect-ratio: unset;
+        height: auto;
     }
 }
