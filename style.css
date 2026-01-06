@@ -5,110 +5,97 @@
     font-family: Arial, sans-serif;
 }
 
+/* FULL SCREEN BACKGROUND */
 body {
-    background: #f6e9de;
+    background: #e8dccf;
 }
 
-/* Main Container */
-.cv-container {
-    width: 100%;
+/* CENTER CV LIKE IMAGE */
+.screen {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* LEFT SECTION */
+/* CV CARD */
+.cv {
+    width: 100%;
+    max-width: 420px;   /* phone perfect width */
+    background: #fdf1e8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* LEFT */
 .left {
     background: #9c7354;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px;
 }
 
-.profile img {
-    width: 150px;
-    height: 150px;
+.left img {
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .left h1 {
-    font-size: 26px;
+    font-size: 22px;
     letter-spacing: 2px;
 }
 
 .subtitle {
-    margin: 15px 0;
-    line-height: 1.5;
-}
-
-.contact {
-    text-align: left;
-    margin-top: 30px;
-}
-
-.contact h3 {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.contact p {
-    margin-bottom: 12px;
+    margin: 10px 0 20px;
     font-size: 14px;
 }
 
-/* RIGHT SECTION */
-.right {
-    background: #fdf1e8;
-    padding: 30px 20px;
+.contact p {
+    font-size: 13px;
+    margin-bottom: 8px;
 }
 
-.right section {
-    margin-bottom: 30px;
+.contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* RIGHT */
+.right {
+    padding: 20px;
 }
 
 .right h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin: 15px 0 5px;
     color: #3a2a1d;
 }
 
 .right p,
 .right li {
-    line-height: 1.6;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .right ul {
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
-/* =======================
-   DESKTOP VIEW (>=768px)
-========================== */
+/* DESKTOP VIEW */
 @media (min-width: 768px) {
-    .cv-container {
-        flex-direction: row;
+    .cv {
+        max-width: 900px;
+        display: flex;
     }
 
     .left {
         width: 35%;
-        min-height: 100vh;
     }
 
     .right {
         width: 65%;
-        padding: 40px;
-    }
-
-    .profile img {
-        width: 170px;
-        height: 170px;
-    }
-
-    .right h2 {
-        font-size: 28px;
     }
 }
